@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#172d57">
+  <meta name="description" content="把猶豫交給轉盤。自訂選項、一鍵套用靈感，公平隨機抽出今天的答案。">
+  <title>就這個！｜選擇困難救星</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23172d57'/%3E%3Ccircle cx='32' cy='34' r='20' fill='%23ffbd59'/%3E%3Cpath d='M24 8h16L32 25z' fill='%23f66c47'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23172d57'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">✳</span> 就這個！</a><span class="header-note">給日常的小決定，一點偶然。</span><span class="edition">THE DECISION CLUB / 01</span></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">LESS THINKING, MORE LIVING</p><h1>想太多？<span>轉一下。</span></h1></div><p>午餐吃什麼、休息做什麼？<br>放進你的選項，讓偶然幫個忙。</p></div>
+    <div class="workspace">
+      <section class="wheel-panel" aria-labelledby="wheel-title">
+        <div class="panel-top"><h2 id="wheel-title">今日的答案製造機</h2><span class="pill">每個選項・相同機率</span></div>
+        <div class="wheel-wrap"><span class="pointer" aria-hidden="true"></span><canvas id="wheel" width="900" height="900" role="img" aria-label="隨機選擇轉盤，選項列於右側"></canvas><span class="wheel-hub" aria-hidden="true">就<br>這個</span></div>
+        <button class="spin-button" id="spin" type="button">轉一下，幫我選！ <span aria-hidden="true">✳</span></button>
+        <p class="wheel-note" id="wheel-note">不用想太久，小決定交給轉盤。</p>
+      </section>
+      <section class="options-panel" aria-labelledby="options-title">
+        <div class="section-heading"><h2 id="options-title">有哪些好選擇？</h2><span id="count">6 / 12</span></div>
+        <div class="presets" aria-label="快速套用選項"><button type="button" data-preset="food">午餐吃什麼</button><button type="button" data-preset="break">休息一下</button><button type="button" data-preset="weekend">週末靈感</button></div>
+        <p class="input-help">點文字修改；每個選項最多 24 字。</p>
+        <ul id="options" class="options-list"></ul>
+        <form id="add-form"><label class="sr-only" for="new-option">新增選項</label><input id="new-option" maxlength="24" placeholder="還有什麼可能？" autocomplete="off"><button type="submit" aria-label="加入選項">＋</button></form>
+        <p id="error" class="error" role="alert"></p>
+        <div class="result-box" id="result-box"><span class="eyebrow" id="result-label">A LITTLE SURPRISE</span><p id="result" role="status" aria-live="polite">你的下一個小驚喜，<br>就在這一轉。</p><span id="result-detail">準備好就按下橙色按鈕。</span></div>
+      </section>
+    </div>
+    <footer><span><b>偶然決定，自己喜歡。</b> 不合心意？再轉一次也可以。</span><span>無需登入 · 選項不會上傳</span></footer>
+  </main>
+  <noscript><p>請啟用 JavaScript 使用轉盤。</p></noscript>
+</body>
+</html>
