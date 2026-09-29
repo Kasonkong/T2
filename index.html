@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080c18">
+  <title>奇想販賣機 · 接收一點不尋常</title>
+  <meta name="description" content="選一種頻道，接收來自未知宇宙的趣味任務、朋友挑戰和腦洞點子。讓今天多一點不尋常。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080c18'/%3E%3Cpath d='M16 4l3 9 9 3-9 3-3 9-3-9-9-3 9-3z' fill='%239affde'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="奇想販賣機首頁"><span class="brand-symbol" aria-hidden="true">✳</span><span>奇想販賣機<small>ODDITY STATION</small></span></a>
+      <div class="station-id"><span>地球支站</span><span class="divider">/</span><span>SECTOR 08</span></div>
+    </header>
+    <main>
+      <div class="intro">
+        <div><p class="eyebrow">TRANSMISSION FROM THE UNKNOWN</p><h1>接收一點<span>不尋常。</span></h1></div>
+        <p class="intro-note">宇宙很大，無聊很小。<br>選一個頻道，看看今天會遇見什麼。</p>
+      </div>
+      <div class="console-layout">
+        <section class="control-panel" aria-labelledby="channel-heading">
+          <div class="panel-label"><span>01 / 頻道選擇</span><span class="mini-cross" aria-hidden="true">＋</span></div>
+          <h2 id="channel-heading">想接收什麼訊號？</h2>
+          <div class="channels" role="group" aria-label="選擇奇想類型">
+            <button class="channel active" data-channel="all" aria-pressed="true"><span class="channel-icon" aria-hidden="true">✳</span><span class="channel-copy"><strong>交給宇宙</strong><small>什麼都有可能</small></span><span class="channel-number">00</span></button>
+            <button class="channel" data-channel="idea" aria-pressed="false"><span class="channel-icon" aria-hidden="true">◇</span><span class="channel-copy"><strong>腦洞靈感</strong><small>讓想像力離開軌道</small></span><span class="channel-number">01</span></button>
+            <button class="channel" data-channel="mission" aria-pressed="false"><span class="channel-icon" aria-hidden="true">⌁</span><span class="channel-copy"><strong>日常奇遇</strong><small>把小事變成探險</small></span><span class="channel-number">02</span></button>
+            <button class="channel" data-channel="friends" aria-pressed="false"><span class="channel-icon" aria-hidden="true">◎</span><span class="channel-copy"><strong>好友挑戰</strong><small>一起做一點傻事</small></span><span class="channel-number">03</span></button>
+          </div>
+          <div class="panel-bottom"><div class="frequency" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p>不需要準備，帶上好奇心就好。</p></div>
+        </section>
+        <section class="receiver" aria-labelledby="result-title">
+          <div class="receiver-top"><span>02 / 訊號接收艙</span><span class="signal-status" id="signal-status">READY TO RECEIVE</span></div>
+          <div class="result-area" id="result-area">
+            <div class="result-meta"><span class="category-tag" id="category-tag">起始訊號</span><span id="result-code">SIGNAL / 000</span></div>
+            <div class="signal-glyph" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="glyph-core">✳</span><span class="orbit-point"></span></div>
+            <div class="result-copy" aria-live="polite" aria-atomic="true"><p class="result-kicker" id="result-kicker">宇宙給你的第一份小禮物</p><h2 id="result-title">替平凡物件<br>取個不平凡的名字。</h2><p class="result-description" id="result-description">看看身邊的一個物件，把它想像成外星科技。你的水杯，可能是「液態能量補給艙」。</p></div>
+            <div class="task-meta"><span id="task-time">約 1 分鐘</span><span class="meta-separator" aria-hidden="true">·</span><span id="task-people">一個人也能玩</span></div>
+            <div class="scan-line" aria-hidden="true"></div>
+          </div>
+          <div class="receiver-actions"><button class="draw-button" id="draw-button"><span class="draw-icon" aria-hidden="true">✳</span><span id="draw-label">抽取奇想</span></button><button class="complete-button" id="complete-button">任務完成 <span aria-hidden="true">✓</span></button></div>
+          <p class="feedback" id="feedback" role="status">每次接收，都可能開啟一個新宇宙。</p>
+        </section>
+      </div>
+      <div class="station-footer"><span class="manifesto">保持好奇。允許荒謬。</span><div class="session-counter"><span>本次已接收</span><strong id="draw-count">00</strong><span>個奇想</span></div><span class="footer-coordinate">22.3° N / EARTH</span></div>
+    </main>
+    <footer class="page-footer"><span>ODDITY STATION © 2026</span><span>免費供應奇想，沒有標準答案。</span></footer>
+  </div>
+</body>
+</html>
